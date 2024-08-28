@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms & Events</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        input,
+        textarea,
+        button {
+            font-family: inherit;
+        }
+
+        #form-container {
+            max-width: 500px;
+            margin-inline: auto;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 0.5rem
+        }
+
+        form>div {
+            margin-bottom: 1rem;
+        }
+
+        form input {
+            width: 100%;
+            min-height: 26px;
+        }
+
+        #users-container {
+            margin-top: 4rem;
+        }
+
+        .card {
+            width: 25%;
+            display: inline-block;
+            margin-right: -4px;
+            border: 2px solid #ebebeb;
+        }
+
+        .card-content {
+            padding: 1rem;
+        }
+
+        .card-content>* {
+            margin-top: 0;
+        }
+
+        .card-content>*:last-child {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <div id="form-container">
+            <h1>Forms ed Eventi</h1>
+            <form>
+                <div>
+                    <label for="name">Nome</label>
+                    <input id="name" type="text" placeholder="inserisci il tuo nome" required>
+                </div>
+                <div>
+                    <label for="surname">Cognome</label>
+                    <input id="surname" type="text" placeholder="inserisci il tuo cognome" required>
+                </div>
+                <div>
+                    <label for="age">Età</label>
+                    <input id="age" type="number" placeholder="inserisci la tua età" min="18" max="30" required>
+                </div>
+                <div>
+                    <label for="phone">Telefono</label>
+                    <input id="phone" type="tel" placeholder="inserisci il tuo telefono" required>
+                </div>
+                <button type="submit">Invia</button>
+                <button type="reset">Reset</button>
+                <button type="button">Bottone agnostico</button>
+            </form>
+
+        </div>
+
+        <div id="users-container">
+            <!-- 
+            modello per la nostra card
+                
+            <div class="card">
+                <div class="card-content">
+                    <h3>Nome Cognome</h3>
+                    <p>Età: 30</p>
+                    <p>Telefono: 1298312873123</p>
+                </div>
+            </div> -->
+
+
+        </div>
+    </main>
+    <script src="./forms.js"></script>
+</body>
+
+</html>

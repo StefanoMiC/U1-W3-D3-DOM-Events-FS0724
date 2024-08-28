@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Events</title>
+    <style>
+        #moving-area {
+            margin-block: 2rem;
+            width: 200px;
+            height: 200px;
+            background-color: lightgrey;
+        }
+
+        .color-red {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>DOM Events</h1>
+    <h2>Gli eventi possono essere applicati in 3 modi diversi:</h2>
+
+    <ol>
+        <li>IN LINEA - sul tag HTML</li>
+        <li>TRAMITE PROPRIETA' DEL NODO - es. elemento.onclick</li>
+        <li>TRAMITE METODO SUL NODO - es. element.addEventListener()</li>
+    </ol>
+
+    <h3>
+        IN LINEA come attributo di evento
+    </h3>
+    <p>Questo metodo lo utilizziamo quando abbiamo già una struttura esistente nel nostro file HTML</p>
+    <!-- <button onclick="console.log('evento in linea')">Evento in linea</button> -->
+    <button onclick="handleInlineEvent(event)">Evento in linea</button>
+    <!-- N.B. usare le tonde in questo contesto è richiesto, ma sarebbe un errore usarle in JS!!!! -->
+    <!-- N.B.2 se vogliamo ricevere l'evento dal nostro event listener usato in questo modo l'argomento della funzione DEVE chiamarsi ESATTAMENTE event -->
+
+    <h3>EVENTO APPLICATO TRAMITE PROPRIETA' DEL NODO</h3>
+    <p>In questo caso ci servirà reperire il bottone tramite metodi di selezione del DOM, con il riferimento al suo nodo
+        andremo a sovrascrivere una sua proprietà corrispndente ad un evento</p>
+    <button id="second-btn">Evento da proprietà del nodo</button>
+
+    <h3>EVENTO APPLICATO TRAMITE METODO .addEventListener() </h3>
+    <p>In questo caso ci servirà reperire il bottone tramite metodi di selezione del DOM, con il riferimento al suo nodo
+        andremo ad utilizzare il metodo .addEventListener() sul nodo stesso</p>
+    <button id="third-btn">Evento da metodo sul nodo</button>
+
+
+    <div id="moving-area"></div>
+
+    <input type="text">
+
+    <div id="testing-targets">
+        <h2>titolo</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae eum ullam, laborum, ea aliquam delectus
+            pariatur unde harum recusandae fugit eos dolores distinctio, minima odio! Esse hic quia labore sequi.</p>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
